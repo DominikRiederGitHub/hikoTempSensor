@@ -27,6 +27,7 @@ public class TempSensorApplication {
 		client.bindThing(sensor);
 		
 		client.run();
+		
 	}
 	
 	public static ClientConfigurator makeConfigurator() {
