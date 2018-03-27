@@ -7,7 +7,7 @@ import TemperaturSensor.SensorThing.TempSensorThing;
 
 public class TempSensorApplication {
 	
-	static String hikoServer = "ws://192:80/Thingworx/WS";
+	static String hikoServer = "ws://localhost:80/Thingworx/WS";
 	static String hikoAppKey = "6ddf707e-08c3-49bb-8c8f-91e28b4f1e5d";
 	
 	static String studioServer = "wss://dqnyqm72.studio-trial.thingworx.io:8443/Thingworx/WS";
@@ -32,8 +32,8 @@ public class TempSensorApplication {
 	
 	public static ClientConfigurator makeConfigurator() {
 		ClientConfigurator config = new ClientConfigurator();
-		config.setUri(studioServer);
-		config.setAppKey(studioAppKey);
+		config.setUri(hikoServer);
+		config.setAppKey(hikoAppKey);
 		config.ignoreSSLErrors(true);
 		return config;
 	}
